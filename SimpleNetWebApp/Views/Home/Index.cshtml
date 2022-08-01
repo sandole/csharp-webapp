@@ -1,0 +1,26 @@
+﻿@using SimpleNetWebBusinessLayer.Models;
+@model Author
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+<div class="jumbotron">
+    <h1>Featured Author</h1>
+    <div class="card">
+        <div class="card-header">
+            <h2>@Model.FullName</h2>
+        </div>
+        <div class="card-body">
+            @foreach (var b in Model.Books)
+            { 
+                <h4>@b.Title</h4>
+            }
+        </div>
+    </div>
+</div>
